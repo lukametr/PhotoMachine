@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhotoMachine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="lang-switch" class="lang-switch">
+    <button id="ka-btn" class="active">ქართული</button>
+    <button id="en-btn">English</button>
+  </div>
+  <div id="main-screen" class="centered">
+    <h1 data-key="tap_to_start">Tap to Start<br><span style="font-size:1.5rem; font-weight:normal;" data-key="touch_to_start">დასაწყებად შეეხეთ ეკრანს</span></h1>
+    <button id="start-btn">▶️</button>
+  </div>
+  <div id="payment-screen" class="centered hidden">
+    <h2 data-key="payment_instruction">გადახდის დასაწყებად დაადეთ ბარათი ან ტელეფონი</h2>
+    <div class="price" data-key="price">ფასი: 5₾</div>
+    <div class="loader"></div>
+  </div>
+  <div id="success-screen" class="centered hidden">
+    <h2 data-key="payment_success">Payment Success</h2>
+    <button id="continue-btn" data-key="continue">გაგრძელება</button>
+  </div>
+  <div id="failure-screen" class="centered hidden">
+    <h2 data-key="payment_failure">Payment Failure</h2>
+    <button id="retry-btn" data-key="try_again">Try Again</button>
+    <button id="cancel-btn" data-key="cancel">Cancel</button>
+  </div>
+  <div id="admin-zone" class="admin-zone"></div>
+  <div id="admin-modal" class="admin-modal hidden">
+    <div class="admin-modal-content">
+      <h2>ადმინისტრატორის პინ კოდი</h2>
+      <input type="password" id="admin-pin" maxlength="8" autocomplete="off" autofocus placeholder="პინი">
+      <div class="admin-modal-actions">
+        <button id="admin-cancel">გაუქმება</button>
+        <button id="admin-submit">დადასტურება</button>
+      </div>
+      <div id="admin-error" class="admin-error"></div>
+    </div>
+  </div>
+  <div id="admin-password-modal" class="admin-modal hidden">
+    <div class="admin-modal-content">
+      <h2>ადმინისტრატორის პაროლი</h2>
+      <input type="password" id="admin-password" maxlength="32" autocomplete="off" autofocus placeholder="პაროლი">
+      <div class="admin-modal-actions">
+        <button id="admin-password-cancel">გაუქმება</button>
+        <button id="admin-password-submit">დადასტურება</button>
+      </div>
+      <div id="admin-password-error" class="admin-error"></div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html> 
